@@ -1,0 +1,43 @@
+{
+  "feature_version": "medial_track_restricted_profile_v1",
+  "feature": "bump_mm",
+  "low": -0.18875951514236206,
+  "high": 0.660092107119495,
+  "fitted_on": "150 бедренных изображений обучающего набора, все пять фолдов",
+  "selection_rule": "max F1 при специфичности >= 0.75 на 5 фолдах; ничьи — меньше FP, затем имя",
+  "selection_cv": {
+    "bump_mm": {
+      "f1": 0.5063,
+      "specificity": 0.7982
+    },
+    "anchor_intensity": {
+      "f1": 0.2319,
+      "specificity": 0.7807
+    },
+    "profile_intensity": {
+      "f1": 0.3889,
+      "specificity": 0.807
+    },
+    "profile_contrast": {
+      "f1": 0.5,
+      "specificity": 0.7632
+    }
+  },
+  "nested_estimate": {
+    "f1": 0.4762,
+    "f1_ci95": [
+      0.3414,
+      0.6133
+    ],
+    "specificity": 0.7544,
+    "tp": 20,
+    "fp": 28,
+    "fn": 16,
+    "tn": 86,
+    "source": "reports/rotation_human_profile/summary.json"
+  },
+  "inputs_sha256": {
+    "reports/rotation_human_profile/features.csv": "19671190d3cc26ffeb96006e2f43ce6b9d1356741d808b71c39313e41678e158",
+    "reports/split.csv": "f71396af1e165f61db4c8737d830e5c64d007c275d0ec62940b1ebc47ccfa148"
+  }
+}

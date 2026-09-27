@@ -1,0 +1,97 @@
+{
+  "nested_metrics": {
+    "tp": 16,
+    "fp": 23,
+    "fn": 20,
+    "tn": 91,
+    "sensitivity": 0.4444444444444444,
+    "specificity": 0.7982456140350878,
+    "balanced_accuracy": 0.6213450292397661,
+    "precision": 0.41025641025641024,
+    "f1": 0.4266666666666667,
+    "macro_f1": 0.6177777777777778,
+    "n": 150,
+    "n_pos": 36,
+    "n_abstain": 0,
+    "abstain_positives": 0,
+    "f1_ci95": [
+      0.26864761558063344,
+      0.5675675675675675
+    ]
+  },
+  "delta_f1_vs_v1_ci95": [
+    -0.04952380952380947,
+    -0.22845710377174125,
+    0.1265137325466878
+  ],
+  "quality_femur": {
+    "tp": 18,
+    "fp": 22,
+    "fn": 23,
+    "tn": 87,
+    "sensitivity": 0.43902439024390244,
+    "specificity": 0.7981651376146789,
+    "balanced_accuracy": 0.6185947639292907,
+    "precision": 0.45,
+    "f1": 0.4444444444444444,
+    "macro_f1": 0.6194824961948249,
+    "n": 150,
+    "n_pos": 41,
+    "f1_ci95": [
+      0.2857142857142857,
+      0.5833567415730334
+    ]
+  },
+  "selections": [
+    {
+      "fold": 0,
+      "selected": "trochanter_bump_mm",
+      "inner_f1": 0.4444444444444444,
+      "inner_specificity": 0.7553191489361702
+    },
+    {
+      "fold": 1,
+      "selected": "trochanter_intensity",
+      "inner_f1": 0.3225806451612903,
+      "inner_specificity": 0.7586206896551724
+    },
+    {
+      "fold": 2,
+      "selected": "trochanter_bump_mm",
+      "inner_f1": 0.5,
+      "inner_specificity": 0.8387096774193549
+    },
+    {
+      "fold": 3,
+      "selected": "trochanter_bump_mm",
+      "inner_f1": 0.47619047619047616,
+      "inner_specificity": 0.7912087912087912
+    },
+    {
+      "fold": 4,
+      "selected": "trochanter_bump_mm",
+      "inner_f1": 0.5396825396825397,
+      "inner_specificity": 0.8351648351648352
+    }
+  ],
+  "variants": {
+    "trochanter_bump_mm": [
+      "trochanter_bump_mm"
+    ],
+    "trochanter_intensity": [
+      "trochanter_intensity"
+    ],
+    "trochanter_contrast": [
+      "trochanter_contrast"
+    ]
+  },
+  "double_crossfit": true,
+  "n_bootstrap": 10000,
+  "deployed": false,
+  "input_sha256": {
+    "reports/split.csv": "f71396af1e165f61db4c8737d830e5c64d007c275d0ec62940b1ebc47ccfa148",
+    "reports/dataset_images.csv": "d03d7164b2cce49b1ca6097aa751eba895846f22a12a50eb5497471fd93a53a2",
+    "annotations/femur_landmarks_v1.csv": "cfe4b800ec480eb6a75437e7750598131f3a9b522fb8396e3287f1edaebda96b"
+  },
+  "limitations": "Повторно использованный разведочный набор, независимого теста нет. Точки врача используются для обучения локализатора, но не на инференсе. ДИ бутстрепит фиксированные OOF-решения и не включает переобучение."
+}

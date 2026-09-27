@@ -1,0 +1,19 @@
+{
+  "images": 80,
+  "annotated_images": 80,
+  "studies": 55,
+  "regions": {
+    "femur_left": 40,
+    "femur_right": 40
+  },
+  "rotation_positives": 36,
+  "roi_positives": 7,
+  "fixed_split_sha256": "f71396af1e165f61db4c8737d830e5c64d007c275d0ec62940b1ebc47ccfa148",
+  "annotation_source": "human",
+  "human_reviewed_images": 80,
+  "point_visibility": {
+    "visible": 238,
+    "not_visible": 46,
+    "uncertain": 36
+  }
+}

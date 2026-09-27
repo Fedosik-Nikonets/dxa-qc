@@ -1,0 +1,82 @@
+{
+  "images": 150,
+  "studies": 78,
+  "positive_images": 36,
+  "tracked_images": 150,
+  "measured_images": 149,
+  "human_images": 80,
+  "variants": {
+    "bump_mm": [
+      "bump_mm"
+    ],
+    "anchor_intensity": [
+      "anchor_intensity"
+    ],
+    "profile_intensity": [
+      "profile_intensity"
+    ],
+    "profile_contrast": [
+      "profile_contrast"
+    ]
+  },
+  "nested_metrics": {
+    "tp": 20,
+    "fp": 28,
+    "fn": 16,
+    "tn": 86,
+    "sensitivity": 0.5555555555555556,
+    "specificity": 0.7543859649122807,
+    "balanced_accuracy": 0.6549707602339181,
+    "precision": 0.4166666666666667,
+    "f1": 0.47619047619047616,
+    "macro_f1": 0.6362433862433863,
+    "n": 150,
+    "n_pos": 36,
+    "n_abstain": 1,
+    "abstain_positives": 0,
+    "f1_ci95": [
+      0.34138836772983117,
+      0.613340909090909
+    ]
+  },
+  "selections": [
+    {
+      "fold": 0,
+      "selected": "profile_contrast",
+      "inner_f1": 0.46875,
+      "inner_specificity": 0.7553191489361702
+    },
+    {
+      "fold": 1,
+      "selected": "profile_contrast",
+      "inner_f1": 0.5074626865671642,
+      "inner_specificity": 0.7816091954022989
+    },
+    {
+      "fold": 2,
+      "selected": "profile_contrast",
+      "inner_f1": 0.5245901639344263,
+      "inner_specificity": 0.8064516129032258
+    },
+    {
+      "fold": 3,
+      "selected": "profile_contrast",
+      "inner_f1": 0.5454545454545454,
+      "inner_specificity": 0.7912087912087912
+    },
+    {
+      "fold": 4,
+      "selected": "bump_mm",
+      "inner_f1": 0.48484848484848486,
+      "inner_specificity": 0.7912087912087912
+    }
+  ],
+  "deployed": false,
+  "input_sha256": {
+    "reports/split.csv": "f71396af1e165f61db4c8737d830e5c64d007c275d0ec62940b1ebc47ccfa148",
+    "reports/dataset_images.csv": "d03d7164b2cce49b1ca6097aa751eba895846f22a12a50eb5497471fd93a53a2",
+    "annotations/femur_landmarks_v1.csv": "cfe4b800ec480eb6a75437e7750598131f3a9b522fb8396e3287f1edaebda96b",
+    "annotations/femur_points_human.csv": "e5bcafa02915f91fea3e9b7cfb34916579c2e93d86a55589cd19daca3c1566a7"
+  },
+  "limitations": "Exploratory reused dataset, not an untouched test. Human coordinates only for diagnostics. Human visibility not an inference input. CI bootstraps fixed OOF predictions by study and excludes model-refitting uncertainty."
+}

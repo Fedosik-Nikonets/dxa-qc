@@ -1,0 +1,21 @@
+{
+  "pipeline_check": {
+    "matched_images": 249,
+    "geometry_mismatches": 0,
+    "artifact_in_sample_vs_oof": 1
+  },
+  "macro_f1_pipeline": {
+    "spine": 0.6686274509803921,
+    "femur": 0.6298701298701299,
+    "all_types": 0.6531245225362873
+  },
+  "macro_f1_nested": {
+    "spine": 0.6196078431372549,
+    "femur": 0.4880952380952381,
+    "all_types": 0.5670028011204482
+  },
+  "n_images": 249,
+  "n_studies": 100,
+  "n_rows": 495,
+  "n_bootstrap": 10000
+}

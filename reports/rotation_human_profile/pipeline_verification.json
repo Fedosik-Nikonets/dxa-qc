@@ -1,0 +1,44 @@
+{
+  "files": 499,
+  "unique_study_images": 252,
+  "status": {
+    "Success": 499
+  },
+  "reader": {
+    "pydicom": 499
+  },
+  "repeat_mismatches_except_time": 0,
+  "builtin_reader_mismatches_except_time": 0,
+  "day5_prediction_mismatches": 0,
+  "rule_comparisons": {
+    "spine_rules.csv": {
+      "matched_images": 99,
+      "prediction_mismatches": 0
+    },
+    "femur_rules.csv": {
+      "matched_images": 150,
+      "prediction_mismatches": 0
+    },
+    "rotation_rule/decisions.csv": {
+      "matched_images": 150,
+      "prediction_mismatches": 0
+    }
+  },
+  "rows_with_read_warnings": 488,
+  "versions": {
+    "pydicom": "3.0.1",
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "opencv-python-headless": "4.10.0.84",
+    "pytest": "8.3.3"
+  },
+  "input_sha256": {
+    "reports/spine_rules.csv": "9af8995e35fb898e72d026206ffcfeda19ad29935a03c2da8ab0480fd1a1d67b",
+    "reports/femur_rules.csv": "dc5abe05dc0cfdb00968ed705f3d321a556cbe9f42e7b964fc30fbeb98d75b06",
+    "reports/rotation_rule/decisions.csv": "2d4c925496f22567f9cab8c6367efbd201d8ab808c2f524d0b65921b6d929e4b",
+    "models/rotation_profile_v1.json": "a69631e5cf6b8a03688ced3e1ab87ebd3bf7488bd8c8ee34cbfcb13d7de3b676",
+    "reports/batch_diagnostics_train.csv": "ea541d86e4622fc29d7d3df0c677ed080e5961388a9e0fc2c9983a4062425ecc"
+  },
+  "scope": "Core inference dependencies only; full training/service requirements and Docker not verified. CSV content comparison excludes processing time; byte-identical XLSX not tested.",
+  "passed": true
+}

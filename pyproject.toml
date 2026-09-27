@@ -1,0 +1,24 @@
+# Пакет нужен, чтобы команда из ТЗ работала без PYTHONPATH:
+#     pip install -e .
+#     python -m dxa_qc.batch --input Исследования --output result.xlsx
+# Без установки то же самое запускается как
+#     PYTHONPATH=src python -m dxa_qc.batch ...
+#
+# Версии зависимостей закреплены в requirements.txt и здесь сознательно не
+# дублируются: в образе ставится сначала requirements.txt, потом пакет с
+# --no-deps, иначе пины разъедутся.
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dxa-qc"
+version = "1.0.0"
+description = "Оценка качества денситометрических (DXA) исследований и корректности разметки"
+requires-python = ">=3.10"
+
+[project.scripts]
+dxa-qc = "dxa_qc.batch:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

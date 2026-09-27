@@ -1,0 +1,62 @@
+{
+  "images": 150,
+  "tracked_images": 150,
+  "restricted_candidates": 149,
+  "variants_explored": 14,
+  "nested_metrics": {
+    "tp": 12,
+    "fp": 14,
+    "fn": 24,
+    "tn": 100,
+    "sensitivity": 0.3333333333333333,
+    "specificity": 0.8771929824561403,
+    "balanced_accuracy": 0.6052631578947368,
+    "precision": 0.46153846153846156,
+    "f1": 0.3870967741935484,
+    "macro_f1": 0.613716454323665,
+    "n": 150,
+    "n_pos": 36,
+    "n_abstain": 1,
+    "abstain_positives": 0,
+    "f1_ci95": [
+      0.21818181818181817,
+      0.5507246376811594
+    ]
+  },
+  "selections": [
+    {
+      "fold": 0,
+      "selected": "restricted_bump",
+      "inner_f1": 0.4642857142857143,
+      "inner_specificity": 0.8191489361702128
+    },
+    {
+      "fold": 1,
+      "selected": "restricted_angle_bump",
+      "inner_f1": 0.36363636363636365,
+      "inner_specificity": 0.8390804597701149
+    },
+    {
+      "fold": 2,
+      "selected": "shaft_bounded_angle_absolute",
+      "inner_f1": 0.4827586206896552,
+      "inner_specificity": 0.8172043010752689
+    },
+    {
+      "fold": 3,
+      "selected": "restricted_angle_both",
+      "inner_f1": 0.5185185185185185,
+      "inner_specificity": 0.8791208791208791
+    },
+    {
+      "fold": 4,
+      "selected": "shaft_bounded_angle_bump",
+      "inner_f1": 0.5,
+      "inner_specificity": 0.8791208791208791
+    }
+  ],
+  "deployed": false,
+  "split_sha256": "f71396af1e165f61db4c8737d830e5c64d007c275d0ec62940b1ebc47ccfa148",
+  "points_sha256": "bdb2df34fe1bbcf9601a7d3355f4c60f5242986ad9e369f616a1f3ce222fd432",
+  "limitations": "Exploratory reused dataset; nested CV isolates label-based variant choice, not prior human feature development. Landmarks remain draft. No new held-out dataset."
+}

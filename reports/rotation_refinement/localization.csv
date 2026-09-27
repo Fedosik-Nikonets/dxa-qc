@@ -1,0 +1,13 @@
+mode,group,n,median_mm,p90_mm
+global,all_annotated,72,30.599999999999998,44.16
+global,same_previous_images,29,30.599999999999998,47.879999999999995
+global,visible_only,10,22.5,38.699999999999996
+global,uncertain_only,62,30.599999999999998,44.16
+restricted,all_annotated,72,8.7,22.68
+restricted,same_previous_images,29,8.4,24.359999999999996
+restricted,visible_only,10,8.4,10.379999999999999
+restricted,uncertain_only,62,9.3,23.339999999999996
+shaft_bounded,all_annotated,72,11.7,28.739999999999995
+shaft_bounded,same_previous_images,29,9.0,29.159999999999997
+shaft_bounded,visible_only,10,8.4,10.379999999999999
+shaft_bounded,uncertain_only,62,14.399999999999999,29.339999999999996

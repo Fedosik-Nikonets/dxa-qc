@@ -1,0 +1,13 @@
+*.pyc
+*.zip
+.DS_Store
+.venv/
+__pycache__/
+artifacts/
+weights/*.pt
+
+# сохранённый образ для сдачи (build.sh --save)
+dxa-qc_*.tar.gz
+
+# шаблон ЛЦТ 2026 от организатора (нужен только для сборки презентации)
+presentation/src/template.pptx

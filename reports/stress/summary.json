@@ -1,0 +1,268 @@
+{
+  "checks": {
+    "dir_seconds": 4.89,
+    "dir_rows": 77,
+    "dir_failures": 9,
+    "dir_overlay_png": 68,
+    "dir_overlay_dicom": 68,
+    "zip_seconds": 4.93,
+    "zip_rows": 77,
+    "zip_failures": 9,
+    "zip_overlay_png": 68,
+    "zip_overlay_dicom": 68,
+    "dir_equals_zip": true,
+    "max_seconds_per_study": 0.391,
+    "large_2048_seconds": 0.391,
+    "copies_29_rows": 29,
+    "copies_29_same_decision": true,
+    "scale_sources": [
+      "exposed_area",
+      "pixel_spacing",
+      "scanner_default"
+    ],
+    "empty_zip_code": 0,
+    "empty_zip_rows": 0
+  },
+  "problems": [],
+  "lossless": {
+    "tilt": {
+      "rebuilt": [
+        "Поясничный отдел позвоночника",
+        "SPINE_AXIS_TILT",
+        "Success"
+      ],
+      "mono1": [
+        "Поясничный отдел позвоночника",
+        "SPINE_AXIS_TILT",
+        "Success"
+      ],
+      "bit16": [
+        "Поясничный отдел позвоночника",
+        "SPINE_AXIS_TILT",
+        "Success"
+      ],
+      "explicit_be": [
+        "Поясничный отдел позвоночника",
+        "SPINE_AXIS_TILT",
+        "Success"
+      ],
+      "no_exposed_area": [
+        "Поясничный отдел позвоночника",
+        "SPINE_AXIS_TILT",
+        "Success"
+      ],
+      "pixel_spacing": [
+        "Поясничный отдел позвоночника",
+        "SPINE_AXIS_TILT",
+        "Success"
+      ]
+    },
+    "artifact": {
+      "rebuilt": [
+        "Поясничный отдел позвоночника",
+        "SPINE_ARTIFACT",
+        "Success"
+      ],
+      "mono1": [
+        "Поясничный отдел позвоночника",
+        "SPINE_ARTIFACT",
+        "Success"
+      ],
+      "bit16": [
+        "Поясничный отдел позвоночника",
+        "SPINE_ARTIFACT",
+        "Success"
+      ],
+      "explicit_be": [
+        "Поясничный отдел позвоночника",
+        "SPINE_ARTIFACT",
+        "Success"
+      ],
+      "no_exposed_area": [
+        "Поясничный отдел позвоночника",
+        "SPINE_ARTIFACT",
+        "Success"
+      ],
+      "pixel_spacing": [
+        "Поясничный отдел позвоночника",
+        "SPINE_ARTIFACT",
+        "Success"
+      ]
+    },
+    "positioning": {
+      "rebuilt": [
+        "Поясничный отдел позвоночника",
+        "SPINE_POSITIONING",
+        "Success"
+      ],
+      "mono1": [
+        "Поясничный отдел позвоночника",
+        "SPINE_POSITIONING",
+        "Success"
+      ],
+      "bit16": [
+        "Поясничный отдел позвоночника",
+        "SPINE_POSITIONING",
+        "Success"
+      ],
+      "explicit_be": [
+        "Поясничный отдел позвоночника",
+        "SPINE_POSITIONING",
+        "Success"
+      ],
+      "no_exposed_area": [
+        "Поясничный отдел позвоночника",
+        "SPINE_POSITIONING",
+        "Success"
+      ],
+      "pixel_spacing": [
+        "Поясничный отдел позвоночника",
+        "SPINE_POSITIONING",
+        "Success"
+      ]
+    },
+    "rotation": {
+      "rebuilt": [
+        "Проксимальный отдел правого бедра",
+        "FEMUR_POSITIONING_ROTATION",
+        "Success"
+      ],
+      "mono1": [
+        "Проксимальный отдел правого бедра",
+        "FEMUR_POSITIONING_ROTATION",
+        "Success"
+      ],
+      "bit16": [
+        "Проксимальный отдел правого бедра",
+        "FEMUR_POSITIONING_ROTATION",
+        "Success"
+      ],
+      "explicit_be": [
+        "Проксимальный отдел правого бедра",
+        "FEMUR_POSITIONING_ROTATION",
+        "Success"
+      ],
+      "no_exposed_area": [
+        "Проксимальный отдел правого бедра",
+        "FEMUR_POSITIONING_ROTATION",
+        "Success"
+      ],
+      "pixel_spacing": [
+        "Проксимальный отдел правого бедра",
+        "FEMUR_POSITIONING_ROTATION",
+        "Success"
+      ]
+    },
+    "roi": {
+      "rebuilt": [
+        "Проксимальный отдел правого бедра",
+        "FEMUR_POSITIONING_ROTATION;FEMUR_ROI_COVERAGE",
+        "Success"
+      ],
+      "mono1": [
+        "Проксимальный отдел правого бедра",
+        "FEMUR_POSITIONING_ROTATION;FEMUR_ROI_COVERAGE",
+        "Success"
+      ],
+      "bit16": [
+        "Проксимальный отдел правого бедра",
+        "FEMUR_POSITIONING_ROTATION;FEMUR_ROI_COVERAGE",
+        "Success"
+      ],
+      "explicit_be": [
+        "Проксимальный отдел правого бедра",
+        "FEMUR_POSITIONING_ROTATION;FEMUR_ROI_COVERAGE",
+        "Success"
+      ],
+      "no_exposed_area": [
+        "Проксимальный отдел правого бедра",
+        "FEMUR_POSITIONING_ROTATION;FEMUR_ROI_COVERAGE",
+        "Success"
+      ],
+      "pixel_spacing": [
+        "Проксимальный отдел правого бедра",
+        "FEMUR_POSITIONING_ROTATION;FEMUR_ROI_COVERAGE",
+        "Success"
+      ]
+    },
+    "normal": {
+      "rebuilt": [
+        "Проксимальный отдел правого бедра",
+        "",
+        "Success"
+      ],
+      "mono1": [
+        "Проксимальный отдел правого бедра",
+        "",
+        "Success"
+      ],
+      "bit16": [
+        "Проксимальный отдел правого бедра",
+        "",
+        "Success"
+      ],
+      "explicit_be": [
+        "Проксимальный отдел правого бедра",
+        "",
+        "Success"
+      ],
+      "no_exposed_area": [
+        "Проксимальный отдел правого бедра",
+        "",
+        "Success"
+      ],
+      "pixel_spacing": [
+        "Проксимальный отдел правого бедра",
+        "",
+        "Success"
+      ]
+    }
+  },
+  "garbage": {
+    "garbage/series_001/constant.dcm": [
+      "Failure",
+      "не удалось определить анатомическую область: пустая или вырожденная маска тела: "
+    ],
+    "garbage/series_001/empty.dcm": [
+      "Failure",
+      "файл не является DICOM (нет префикса DICM и разбор не удался)"
+    ],
+    "garbage/series_001/jpeg_garbage.dcm": [
+      "Failure",
+      "pydicom: RuntimeError: Unable to decode as exceptions were raised by all availab"
+    ],
+    "garbage/series_001/no_preamble.dcm": [
+      "Success",
+      "SPINE_POSITIONING"
+    ],
+    "garbage/series_001/noise.dcm": [
+      "Failure",
+      "файл не является DICOM (нет префикса DICM и разбор не удался)"
+    ],
+    "garbage/series_001/notes.dcm": [
+      "Failure",
+      "файл не является DICOM (нет префикса DICM и разбор не удался)"
+    ],
+    "garbage/series_001/one_by_one.dcm": [
+      "Failure",
+      "не удалось определить анатомическую область: пустая или вырожденная маска тела: "
+    ],
+    "garbage/series_001/rgb.dcm": [
+      "Failure",
+      "pydicom: DicomParseError: цветное изображение (SamplesPerPixel=3) не поддерживае"
+    ],
+    "garbage/series_001/truncated.dcm": [
+      "Failure",
+      "pydicom: ValueError: The number of bytes of pixel data is less than expected (25"
+    ],
+    "garbage/series_001/разметка.xlsx": [
+      "Failure",
+      "файл не является DICOM (нет префикса DICM и разбор не удался)"
+    ]
+  },
+  "blob": [
+    "Success",
+    "SPINE_AXIS_TILT"
+  ],
+  "passed": true
+}

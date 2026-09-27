@@ -1,0 +1,56 @@
+{
+  "version": "quality_score_v1",
+  "slopes": {
+    "pos": 16.2181,
+    "tilt": 0.6918,
+    "art": 2.541,
+    "roi": 0.2163,
+    "rot": 1.7378
+  },
+  "rules": {
+    "pos": "COVERAGE_MIN - spine_coverage",
+    "tilt": "|spine_angle_deg| - AXIS_TILT_DEG",
+    "art": "logit(artifact_prob) - logit(threshold)",
+    "roi": "FIELD_MIN_MM - femur_field_h_mm",
+    "rot": "max(low - value, value - high)"
+  },
+  "combine": "1 - prod(1 - sigmoid(slope * margin)); >0.5 iff quality_class = 1",
+  "fitted_on": "249 размеченных изображений обучающего набора, все пять фолдов",
+  "nested_estimate": {
+    "снимки": {
+      "n": 249,
+      "позитивов": 73,
+      "roc_auc": 0.778,
+      "roc_auc_ci95": [
+        0.702,
+        0.853
+      ],
+      "pr_auc": 0.55,
+      "roc_auc_бинарного_класса": 0.716
+    },
+    "исследования": {
+      "n": 100,
+      "позитивов": 50,
+      "roc_auc": 0.714,
+      "pr_auc": 0.634,
+      "roc_auc_бинарного_класса": 0.7
+    },
+    "снимки: spine": {
+      "roc_auc": 0.813,
+      "roc_auc_бинарного_класса": 0.771
+    },
+    "снимки: femur": {
+      "roc_auc": 0.739,
+      "roc_auc_бинарного_класса": 0.673
+    }
+  },
+  "inputs_sha256": {
+    "reports/dataset_images.csv": "d03d7164b2cce49b1ca6097aa751eba895846f22a12a50eb5497471fd93a53a2",
+    "reports/spine_rules.csv": "9af8995e35fb898e72d026206ffcfeda19ad29935a03c2da8ab0480fd1a1d67b",
+    "reports/artifact_oof.csv": "8b87a51f54d9833e4e7799188a50795b8ee7c3c5b5ddbbf871a192d23d6c48bf",
+    "reports/femur_rules.csv": "dc5abe05dc0cfdb00968ed705f3d321a556cbe9f42e7b964fc30fbeb98d75b06",
+    "reports/rotation_rule/decisions.csv": "2d4c925496f22567f9cab8c6367efbd201d8ab808c2f524d0b65921b6d929e4b",
+    "reports/rotation_human_profile/nested_oof.csv": "98ed2036fd5f2559a1fd6fec2f4f82a66b3dc0414488d9d6038cedcf78b8c71a",
+    "reports/split.csv": "f71396af1e165f61db4c8737d830e5c64d007c275d0ec62940b1ebc47ccfa148"
+  }
+}

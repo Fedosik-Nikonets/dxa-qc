@@ -1,0 +1,152 @@
+{
+  "images": 150,
+  "studies": 78,
+  "positives": 36,
+  "configs": {
+    "image_C0.001": [
+      "image",
+      0.001
+    ],
+    "image_C0.01": [
+      "image",
+      0.01
+    ],
+    "image_C0.1": [
+      "image",
+      0.1
+    ],
+    "hybrid_C0.001": [
+      "hybrid",
+      0.001
+    ],
+    "hybrid_C0.01": [
+      "hybrid",
+      0.01
+    ],
+    "hybrid_C0.1": [
+      "hybrid",
+      0.1
+    ],
+    "crop_C0.001": [
+      "crop",
+      0.001
+    ],
+    "crop_C0.01": [
+      "crop",
+      0.01
+    ],
+    "crop_C0.1": [
+      "crop",
+      0.1
+    ],
+    "crop_hybrid_C0.001": [
+      "crop_hybrid",
+      0.001
+    ],
+    "crop_hybrid_C0.01": [
+      "crop_hybrid",
+      0.01
+    ],
+    "crop_hybrid_C0.1": [
+      "crop_hybrid",
+      0.1
+    ]
+  },
+  "nested_metrics": {
+    "tp": 17,
+    "fp": 15,
+    "fn": 19,
+    "tn": 99,
+    "sensitivity": 0.4722222222222222,
+    "specificity": 0.868421052631579,
+    "balanced_accuracy": 0.6703216374269005,
+    "precision": 0.53125,
+    "f1": 0.5,
+    "macro_f1": 0.6767241379310345,
+    "n": 150,
+    "n_pos": 36,
+    "f1_ci95": [
+      0.32350569259962053,
+      0.6571428571428571
+    ]
+  },
+  "selections": [
+    {
+      "outer_fold": 0,
+      "config": "crop_hybrid_C0.01",
+      "threshold": 0.6014555333710598,
+      "tp": 14,
+      "fp": 18,
+      "fn": 12,
+      "tn": 76,
+      "f1": 0.4827586206896552,
+      "specificity": 0.8085106382978723
+    },
+    {
+      "outer_fold": 1,
+      "config": "crop_C0.001",
+      "threshold": 0.5100264309189855,
+      "tp": 18,
+      "fp": 21,
+      "fn": 13,
+      "tn": 66,
+      "f1": 0.5142857142857142,
+      "specificity": 0.7586206896551724
+    },
+    {
+      "outer_fold": 2,
+      "config": "crop_C0.001",
+      "threshold": 0.5734839980193205,
+      "tp": 16,
+      "fp": 9,
+      "fn": 11,
+      "tn": 84,
+      "f1": 0.6153846153846154,
+      "specificity": 0.9032258064516129
+    },
+    {
+      "outer_fold": 3,
+      "config": "crop_C0.1",
+      "threshold": 0.5711773799764247,
+      "tp": 20,
+      "fp": 11,
+      "fn": 9,
+      "tn": 80,
+      "f1": 0.6666666666666666,
+      "specificity": 0.8791208791208791
+    },
+    {
+      "outer_fold": 4,
+      "config": "crop_hybrid_C0.01",
+      "threshold": 0.5330299362636307,
+      "tp": 20,
+      "fp": 17,
+      "fn": 11,
+      "tn": 74,
+      "f1": 0.5882352941176471,
+      "specificity": 0.8131868131868132
+    }
+  ],
+  "crop_width_mm": 60,
+  "fallback_images": 1,
+  "clipped_crops": 0,
+  "full_fit_config": "crop_C0.001",
+  "full_fit_threshold": 0.5054085579840378,
+  "minimum_rotation_gate_passed": true,
+  "deployed": false,
+  "encoder_weights_sha256": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec",
+  "input_sha256": {
+    "reports/dataset_images.csv": "d03d7164b2cce49b1ca6097aa751eba895846f22a12a50eb5497471fd93a53a2",
+    "reports/split.csv": "f71396af1e165f61db4c8737d830e5c64d007c275d0ec62940b1ebc47ccfa148"
+  },
+  "versions": {
+    "torch": "2.4.1",
+    "torchvision": "0.19.1",
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.5.2",
+    "opencv-python-headless": "4.10.0.84"
+  },
+  "global_features_sha256": "a6ddc090832530f39e903ae8f5accad7a7129c7a2538016f9ea997da06152315",
+  "limitations": "Exploratory reused dataset, no untouched test. Frozen ImageNet encoder not DXA-specific. All imputation, scaling, head fitting and threshold selection confined to training folds. Bootstrap CI uses fixed OOF predictions, not refitting. Raw scores not calibrated probabilities. Aggregate comparison inherits earlier feature-design reuse from checkpoint. Added automatic ROI after inspecting full-frame experiment; no independent validation of ROI design. Includes all 12 configurations in inner selection."
+}

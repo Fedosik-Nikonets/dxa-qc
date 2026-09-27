@@ -1,0 +1,36 @@
+# Зависимости ОБРАЗА — только то, что нужно для инференса и API.
+# Все версии, включая транзитивные, закреплены (ТЗ 3.2); ставятся с
+# --no-deps --only-binary=:all:, после чего `pip check` проверяет, что набор
+# полон. Версии совпадают с проверенным окружением разработки
+# (.venv на Python 3.12, verify_day6_pipeline.py: passed).
+#
+# Чего здесь нет и почему: torch, torchvision, timm, albumentations,
+# scikit-learn, scikit-image, pandas, scipy — нужны только разведочным
+# скриптам и обучению. Решение на инференсе их не импортирует
+# (проверяется в Dockerfile), а torch добавил бы к образу ~1.5 ГБ.
+
+# --- ядро ---
+numpy==1.26.4
+opencv-python-headless==4.10.0.84
+openpyxl==3.1.5
+et-xmlfile==2.0.0
+
+# --- DICOM, включая сжатые TransferSyntax ---
+pydicom==3.0.1
+pylibjpeg==2.0.1
+pylibjpeg-libjpeg==2.1.0
+pylibjpeg-openjpeg==2.2.1
+
+# --- API ---
+fastapi==0.115.4
+starlette==0.41.3
+pydantic==2.9.2
+pydantic-core==2.23.4
+annotated-types==0.8.0
+typing-extensions==4.16.0
+anyio==4.15.1
+idna==3.19
+python-multipart==0.0.12
+uvicorn==0.32.0
+click==8.5.0
+h11==0.16.0

@@ -1,0 +1,25 @@
+{
+  "images": 150,
+  "points_by_doctor": 58,
+  "localization": [
+    {
+      "variant": "v1_anchor",
+      "n": 58,
+      "median_mm": 9.039121880937675,
+      "p90_mm": 25.162227800695387,
+      "within_5mm": 0.25862068965517243
+    },
+    {
+      "variant": "v2_localizer",
+      "n": 58,
+      "median_mm": 2.473863375370596,
+      "p90_mm": 18.806380880165563,
+      "within_5mm": 0.8448275862068966
+    }
+  ],
+  "input_sha256": {
+    "reports/split.csv": "f71396af1e165f61db4c8737d830e5c64d007c275d0ec62940b1ebc47ccfa148",
+    "reports/dataset_images.csv": "d03d7164b2cce49b1ca6097aa751eba895846f22a12a50eb5497471fd93a53a2",
+    "annotations/femur_landmarks_v1.csv": "cfe4b800ec480eb6a75437e7750598131f3a9b522fb8396e3287f1edaebda96b"
+  }
+}

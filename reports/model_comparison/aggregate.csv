@@ -1,0 +1,15 @@
+система,вид,f1,lo,hi,sensitivity,specificity,источник
+Всё — нарушение (база),base,0.4534,0.4075,0.5,1.0,0.0,reports/multilabel_head/quality.csv
+"Классификатор по пикселям
+снимка",alt,0.4792,0.4,0.5543,0.6301,0.5852,reports/multilabel_head/quality.csv
+Правила без ротации,alt,0.5042,0.3966,0.608,0.411,0.9091,reports/multilabel_head/quality.csv
+"Гибрид: геометрия
++ пиксели снимка",alt,0.506,0.4217,0.5876,0.5753,0.7102,reports/multilabel_head/quality.csv
+"Правила + ротация в точке
+локализатора v2 (отклонена)",alt,0.5584,0.4755,0.6383,0.589,0.7841,rotation_localizer/nested_oof.csv (вложенная)
+"Обучаемая голова
+на геометрии",alt,0.5608,0.4815,0.6378,0.726,0.642,reports/multilabel_head/quality.csv
+"Правила + ротация по профилю края
+(в сервисе)",service,0.5976,0.5095,0.6824,0.6712,0.7614,scripts/15 (вложенная ротация)
+"Правила + ResNet18 на области вертела
+(эксперимент, torch)",experiment,0.6259,0.5333,0.7143,0.6301,0.8409,transfer_snapshot/local_aggregate_oof.csv

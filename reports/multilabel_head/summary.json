@@ -1,0 +1,46 @@
+{
+  "n_images": 249,
+  "n_studies": 100,
+  "primary": "geom+img",
+  "c_grid": [
+    0.03,
+    0.1,
+    0.3,
+    1.0
+  ],
+  "n_pca": 8,
+  "img_side": 24,
+  "n_hist": 16,
+  "n_bootstrap": 10000,
+  "geom_features": {
+    "spine": [
+      "coverage",
+      "abs_angle",
+      "res_rms",
+      "res_amp",
+      "slope_spread",
+      "tophat",
+      "ridge"
+    ],
+    "femur": [
+      "field_h_mm",
+      "field_w_mm",
+      "lateral_mm",
+      "medial_mm",
+      "shaft_deg",
+      "femur_fill",
+      "shaft_w",
+      "base_frac",
+      "wmax_mm",
+      "aspect",
+      "lt12",
+      "lt20",
+      "lt30",
+      "bump_mm",
+      "anchor_intensity",
+      "profile_intensity",
+      "profile_contrast",
+      "fit_rms_mm"
+    ]
+  }
+}

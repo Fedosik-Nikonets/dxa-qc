@@ -1,0 +1,18 @@
+{
+  "fixed_split_sha256": "f71396af1e165f61db4c8737d830e5c64d007c275d0ec62940b1ebc47ccfa148",
+  "annotation_sha256": "bdb2df34fe1bbcf9601a7d3355f4c60f5242986ad9e369f616a1f3ce222fd432",
+  "baseline_features_sha256": "fb2506325a2ef5437cb255d0e0f48c21eb69493f8a85837a6652faea639f5172",
+  "n_images": 150,
+  "n_studies": 78,
+  "n_manual_anchors": 72,
+  "annotation_status": "draft_not_expert_validated",
+  "auto_anchor_comparisons": 29,
+  "auto_anchor_median_error_mm": 55.8,
+  "auto_anchor_p90_error_mm": 88.44,
+  "manual_predictions_changed_minus5px": 5,
+  "manual_predictions_changed_plus5px": 13,
+  "manual_windows_overlapping_shaft_fit": 20,
+  "threshold_fit": "outer training studies only; max F1 subject to training specificity >= 0.75",
+  "deployed": false,
+  "limitation": "Exploratory reused folds; selected80 is enriched; manual anchors unavailable at inference."
+}

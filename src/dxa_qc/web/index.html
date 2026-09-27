@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DXA QC — контроль качества денситометрии</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<style>
+:root {
+  --bg: #f4f5f7; --surface: #ffffff; --surface-2: #f8f9fb; --ink: #18202c; --muted: #5a6474;
+  --line: #dde1e7; --accent: #0b64a8; --accent-ink: #ffffff; --accent-soft: #e6f0f8;
+  --bad: #b8322a; --bad-soft: #fbeceb; --ok: #1d7f47; --ok-soft: #e7f4ec;
+  --warn: #8a5a00; --warn-soft: #fbf1dd; --shadow: 0 1px 2px rgba(16,24,40,.06), 0 1px 3px rgba(16,24,40,.08);
+  --radius: 10px; --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #11151b; --surface: #181d25; --surface-2: #1d232d; --ink: #e6e9ee; --muted: #9aa4b2;
+    --line: #2a313c; --accent: #4ea3e6; --accent-ink: #0b1420; --accent-soft: #16283a;
+    --bad: #f07c72; --bad-soft: #3a1f1d; --ok: #5cc98b; --ok-soft: #173024;
+    --warn: #e2b04a; --warn-soft: #33290f; --shadow: none;
+  }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--ink); }
+body { font: 15px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+button, input { font: inherit; color: inherit; }
+.num { font-variant-numeric: tabular-nums; }
+header.top { display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 14px 24px; background: var(--surface); border-bottom: 1px solid var(--line); }
+.brand { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.brand b { font-size: 18px; letter-spacing: .2px; }
+.brand span { color: var(--muted); }
+.meta { display: flex; gap: 14px; color: var(--muted); font-size: 13px; flex-wrap: wrap; }
+.dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 5px; background: var(--muted); vertical-align: 1px; }
+.dot.on { background: var(--ok); } .dot.off { background: var(--bad); }
+main { max-width: 1440px; margin: 0 auto; padding: 20px 24px 40px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+#upload { padding: 18px; display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; }
+.drop { border: 1.5px dashed var(--line); border-radius: var(--radius); padding: 18px 20px; display: flex;
+  gap: 16px; align-items: center; cursor: pointer; background: var(--surface-2); transition: border-color .15s, background .15s; }
+.drop:hover, .drop:focus-within, .drop.over { border-color: var(--accent); background: var(--accent-soft); }
+.drop svg { flex: none; color: var(--accent); }
+.drop .t1 { font-weight: 600; }
+.drop .t2 { color: var(--muted); font-size: 13px; }
+.drop input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.actions { display: flex; flex-direction: column; gap: 10px; align-items: stretch; min-width: 220px; }
+.btn { border: 1px solid var(--line); background: var(--surface); border-radius: 8px; padding: 8px 14px;
+  cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; justify-content: center; }
+.btn:hover { border-color: var(--accent); }
+a.btn { color: var(--ink); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); font-weight: 600; }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+.btn:focus-visible, .seg button:focus-visible, tr.img:focus-visible, .chip:focus-visible, input:focus-visible {
+  outline: 2px solid var(--accent); outline-offset: 2px; }
+label.opt { display: flex; gap: 8px; align-items: center; color: var(--muted); font-size: 13px; }
+#status { grid-column: 1 / -1; display: none; align-items: center; gap: 10px; color: var(--muted); font-size: 14px; }
+#status.show { display: flex; }
+#status.err { color: var(--bad); }
+.spin { width: 16px; height: 16px; border: 2px solid var(--line); border-top-color: var(--accent); border-radius: 50%; animation: s 0.8s linear infinite; }
+@keyframes s { to { transform: rotate(360deg); } }
+.bar { height: 4px; background: var(--line); border-radius: 2px; overflow: hidden; width: 160px; }
+.bar i { display: block; height: 100%; background: var(--accent); width: 0; }
+#results { display: none; margin-top: 18px; }
+#results.show { display: block; }
+.tiles { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; }
+.tile { padding: 14px 16px; }
+.tile .val { font-size: 26px; font-weight: 650; line-height: 1.1; }
+.tile .k { color: var(--muted); font-size: 13px; margin-top: 4px; }
+.tile.bad .val { color: var(--bad); } .tile.ok .val { color: var(--ok); } .tile.warn .val { color: var(--warn); }
+.row2 { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin: 16px 0 12px; }
+.chips { display: flex; gap: 8px; flex-wrap: wrap; }
+.chip { border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 4px 11px; font-size: 13px; cursor: pointer; }
+.chip b { font-weight: 650; margin-left: 4px; }
+.chip.on { background: var(--bad-soft); border-color: var(--bad); color: var(--bad); }
+.dl { display: flex; gap: 8px; flex-wrap: wrap; }
+.toolbar { display: flex; gap: 12px; align-items: center; padding: 10px 12px; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.seg button { border: 0; background: transparent; padding: 6px 12px; cursor: pointer; border-right: 1px solid var(--line); font-size: 14px; }
+.seg button:last-child { border-right: 0; }
+.seg button[aria-pressed="true"] { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+.search { flex: 1; min-width: 180px; border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; background: var(--surface-2); }
+.count { color: var(--muted); font-size: 13px; }
+.split { display: grid; grid-template-columns: minmax(0, 1fr) 460px; gap: 16px; align-items: start; }
+.tablewrap { overflow: auto; max-height: calc(100vh - 170px); }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+thead th { position: sticky; top: 0; background: var(--surface); text-align: left; font-weight: 600; color: var(--muted);
+  font-size: 12px; text-transform: uppercase; letter-spacing: .4px; padding: 9px 10px; border-bottom: 1px solid var(--line); z-index: 1; }
+td { padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+tr.study td { background: var(--surface-2); font-weight: 600; padding-top: 10px; }
+tr.study .sub { color: var(--muted); font-weight: 400; margin-left: 8px; }
+tr.img { cursor: pointer; }
+tr.img:hover td { background: var(--surface-2); }
+tr.img.sel td { background: var(--accent-soft); }
+td.path { font-family: var(--mono); font-size: 12.5px; word-break: break-all; color: var(--muted); max-width: 240px; }
+td.nw, th.nw { white-space: nowrap; }
+.badge { display: inline-block; border-radius: 6px; padding: 1px 8px; font-size: 12.5px; font-weight: 600; white-space: nowrap; }
+.badge.bad { background: var(--bad-soft); color: var(--bad); }
+.badge.ok { background: var(--ok-soft); color: var(--ok); }
+.badge.fail { background: var(--warn-soft); color: var(--warn); }
+.vs { display: flex; gap: 4px; flex-wrap: wrap; }
+.vchip { border: 1px solid var(--bad); color: var(--bad); border-radius: 5px; padding: 0 6px; font-size: 12px; white-space: nowrap; }
+.err { color: var(--warn); font-size: 13px; }
+.empty { padding: 28px; text-align: center; color: var(--muted); }
+#viewer { position: sticky; top: 16px; padding: 14px; }
+#viewer h3 { margin: 0 0 4px; font-size: 15px; }
+#viewer .p { font-family: var(--mono); font-size: 12px; color: var(--muted); word-break: break-all; margin-bottom: 10px; }
+#viewer .imgbox { background: #0d0f12; border-radius: 8px; min-height: 240px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+#viewer img { max-width: 100%; max-height: calc(100vh - 360px); display: block; }
+#viewer ul { margin: 10px 0; padding-left: 18px; }
+#viewer li { margin: 4px 0; }
+#viewer .hint { color: var(--muted); font-size: 12.5px; margin-top: 8px; }
+#viewer .none { color: var(--muted); padding: 40px 10px; text-align: center; }
+footer { color: var(--muted); font-size: 12.5px; text-align: center; padding: 8px 24px 24px; }
+@media (max-width: 1100px) { .split { grid-template-columns: minmax(0, 1fr); } #viewer { position: static; } .tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 640px) {
+  main { padding: 14px 16px 32px; } header.top { padding: 12px 16px; flex-direction: column; align-items: flex-start; }
+  #upload { grid-template-columns: minmax(0, 1fr); } .actions { min-width: 0; } .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  td.path { max-width: 160px; }
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="brand"><b>DXA QC</b><span>Контроль качества денситометрических исследований</span></div>
+  <div class="meta" id="meta"><span>подключение…</span></div>
+</header>
+<main>
+  <section id="upload" class="card" aria-label="Загрузка исследований">
+    <label class="drop" id="drop">
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+        <path d="M12 15V4m0 0-4 4m4-4 4 4"/><path d="M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg>
+      <div>
+        <div class="t1" id="dropTitle">Перетащите zip-архив с исследованиями или DICOM-файлы одного исследования</div>
+        <div class="t2" id="dropSub">или нажмите, чтобы выбрать. Архив может содержать много исследований — как обучающий набор.</div>
+      </div>
+      <input id="file" type="file" multiple accept=".zip,.dcm,application/zip,application/dicom">
+    </label>
+    <div class="actions">
+      <button class="btn primary" id="run" disabled>Обработать</button>
+      <label class="opt"><input type="checkbox" id="ov" checked> Строить overlay-серию (PNG + DICOM)</label>
+    </div>
+    <div id="status" role="status" aria-live="polite"></div>
+  </section>
+
+  <section id="results" aria-label="Результаты">
+    <div class="tiles" id="tiles"></div>
+    <div class="row2">
+      <div class="chips" id="chips" aria-label="Фильтр по типу нарушения"></div>
+      <div class="dl" id="dl"></div>
+    </div>
+    <div class="split">
+      <div class="card">
+        <div class="toolbar">
+          <div class="seg" id="seg" role="group" aria-label="Фильтр">
+            <button data-f="all" aria-pressed="true">Все</button>
+            <button data-f="bad" aria-pressed="false">С нарушениями</button>
+            <button data-f="ok" aria-pressed="false">Норма</button>
+            <button data-f="fail" aria-pressed="false">Ошибки чтения</button>
+          </div>
+          <input class="search" id="q" type="search" placeholder="Поиск по пути, исследованию, нарушению" aria-label="Поиск">
+          <span class="count num" id="count"></span>
+        </div>
+        <div class="tablewrap">
+          <table>
+            <thead><tr><th>Файл</th><th>Область</th><th class="nw">Проекция</th><th>Итог</th><th class="num" title="Балл нарушения quality_score: больше 0.5 — есть нарушение">Балл</th><th>Нарушения</th><th class="num nw">Время, с</th></tr></thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+      <aside id="viewer" class="card" aria-label="Просмотр overlay"><div class="none">Выберите строку таблицы, чтобы увидеть overlay: снимок и измерения, по которым принято решение.</div></aside>
+    </div>
+  </section>
+</main>
+<footer>Обработка выполняется локально на этом компьютере: файлы не покидают сервис, внешних обращений нет. Результат носит вспомогательный характер и не заменяет оценку врача.</footer>
+
+<script>
+"use strict";
+const $ = (id) => document.getElementById(id);
+function h(tag, attrs, ...kids) {
+  const el = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs || {})) {
+    if (v === null || v === undefined || v === false) continue;
+    if (k === "class") el.className = v;
+    else if (k.startsWith("on")) el.addEventListener(k.slice(2), v);
+    else el.setAttribute(k, v === true ? "" : v);
+  }
+  for (const kid of kids.flat()) if (kid !== null && kid !== undefined && kid !== false)
+    el.append(kid instanceof Node ? kid : document.createTextNode(String(kid)));
+  return el;
+}
+const state = { files: [], job: null, rows: [], vio: {}, filter: "all", vfilter: null, q: "", sel: null };
+
+// ---- статус сервиса ----
+fetch("/health").then(r => r.json()).then(hl => {
+  const m = $("meta"); m.textContent = "";
+  m.append(h("span", {}, "версия ", hl.version));
+  for (const [name, info] of Object.entries(hl.models || {}))
+    m.append(h("span", { title: info.file || "" }, h("i", { class: "dot " + (info.loaded ? "on" : "off") }),
+      name === "artifact" ? "артефакты" : name === "rotation" ? "ротация" : name, info.loaded ? "" : " — не загружена"));
+}).catch(() => { $("meta").textContent = "сервис недоступен"; });
+
+// ---- выбор файлов ----
+const drop = $("drop"), input = $("file");
+function setFiles(list) {
+  state.files = Array.from(list || []);
+  const n = state.files.length;
+  $("run").disabled = n === 0;
+  if (!n) return;
+  const size = state.files.reduce((s, f) => s + f.size, 0);
+  $("dropTitle").textContent = n === 1 ? state.files[0].name : `Выбрано файлов: ${n}`;
+  $("dropSub").textContent = `${(size / 1048576).toFixed(1)} МБ · нажмите «Обработать»`;
+}
+input.addEventListener("change", () => setFiles(input.files));
+["dragenter", "dragover"].forEach(e => drop.addEventListener(e, ev => { ev.preventDefault(); drop.classList.add("over"); }));
+["dragleave", "drop"].forEach(e => drop.addEventListener(e, ev => { ev.preventDefault(); drop.classList.remove("over"); }));
+drop.addEventListener("drop", ev => setFiles(ev.dataTransfer.files));
+
+// ---- запуск ----
+function status(kind, ...content) {
+  const s = $("status"); s.textContent = ""; s.className = "show" + (kind === "err" ? " err" : "");
+  s.append(...content);
+}
+$("run").addEventListener("click", () => {
+  if (!state.files.length) return;
+  const fd = new FormData();
+  state.files.forEach(f => fd.append("files", f, f.name));
+  const xhr = new XMLHttpRequest();
+  const bar = h("i"); const t0 = Date.now(); let timer = null;
+  xhr.open("POST", "/ui/jobs?overlays=" + ($("ov").checked ? "true" : "false"));
+  xhr.upload.onprogress = e => { if (e.lengthComputable) bar.style.width = (100 * e.loaded / e.total).toFixed(0) + "%"; };
+  xhr.upload.onload = () => {
+    const txt = h("span", {}, "Обработка…");
+    status("run", h("span", { class: "spin" }), txt);
+    timer = setInterval(() => { txt.textContent = `Обработка… ${((Date.now() - t0) / 1000).toFixed(0)} с`; }, 500);
+  };
+  xhr.onload = () => {
+    clearInterval(timer); $("run").disabled = false;
+    let body = null; try { body = JSON.parse(xhr.responseText); } catch (e) {}
+    if (xhr.status !== 200 || !body) {
+      const d = body && body.detail;
+      status("err", "Ошибка: " + (Array.isArray(d) ? d.map(x => x.msg).join("; ") : (d || xhr.statusText || "нет ответа")));
+      return;
+    }
+    status("ok", `Готово за ${((Date.now() - t0) / 1000).toFixed(1)} с: ${body.summary.files} файлов, ${body.summary.studies} исследований.`);
+    show(body);
+  };
+  xhr.onerror = () => { clearInterval(timer); $("run").disabled = false; status("err", "Сервис недоступен"); };
+  $("run").disabled = true;
+  status("run", h("span", {}, "Загрузка"), h("div", { class: "bar" }, bar));
+  xhr.send(fd);
+});
+
+// ---- результат ----
+function show(job) {
+  Object.assign(state, { job: job.job, rows: job.rows, vio: job.violations, filter: "all", vfilter: null, q: "", sel: null,
+                         overlays: job.overlays });
+  $("q").value = "";
+  document.querySelectorAll("#seg button").forEach(b => b.setAttribute("aria-pressed", b.dataset.f === "all"));
+  const s = job.summary;
+  const tiles = [
+    ["", s.studies, "исследований"], ["", s.files, "файлов"],
+    ["bad", s.studies_with_violations, "исследований с нарушениями"], ["bad", s.with_violations, "изображений с нарушениями"],
+    [s.failures ? "warn" : "", s.failures, "ошибок чтения"], ["", s.seconds_per_study.toFixed(2) + " с", "на исследование"],
+  ];
+  $("tiles").replaceChildren(...tiles.map(([c, v, k]) => h("div", { class: "card tile " + c }, h("div", { class: "val num" }, v), h("div", { class: "k" }, k))));
+  $("chips").replaceChildren(...Object.entries(s.violation_counts).map(([code, n]) =>
+    h("button", { class: "chip", "data-v": code, title: (state.vio[code] || {}).text || code, "aria-pressed": "false",
+      onclick: () => { state.vfilter = state.vfilter === code ? null : code; render(); } },
+      (state.vio[code] || {}).short || code, h("b", { class: "num" }, n))));
+  const base = `/ui/jobs/${job.job}/files/`;
+  const names = { "result.xlsx": "Таблица .xlsx", "result.csv": "Таблица .csv", "overlays.zip": "Overlay-серия .zip" };
+  $("dl").replaceChildren(...job.files.map(n => h("a", { class: "btn", href: base + n, download: n }, "↓ ", names[n] || n)));
+  $("results").classList.add("show");
+  $("viewer").replaceChildren(h("div", { class: "none" }, "Выберите строку таблицы, чтобы увидеть overlay: снимок и измерения, по которым принято решение."));
+  render();
+}
+
+// Путь внутри исследования: строки сгруппированы по исследованию, повторять его незачем.
+function shortPath(r) {
+  const p = r.path_to_study, i = r.study ? p.indexOf(r.study + "/") : -1;
+  return i >= 0 ? p.slice(i + r.study.length + 1) : p;
+}
+function kind(r) { return r.processing_status !== "Success" ? "fail" : r.quality_class === 1 ? "bad" : "ok"; }
+function visible() {
+  const q = state.q.toLowerCase();
+  return state.rows.filter(r =>
+    (state.filter === "all" || kind(r) === state.filter) &&
+    (!state.vfilter || r.violation_type.split(";").includes(state.vfilter)) &&
+    (!q || [r.path_to_study, r.study, r.anatomical_region, r.violation_type,
+            ...r.violation_type.split(";").map(v => (state.vio[v] || {}).short || "")].join(" ").toLowerCase().includes(q)));
+}
+function verdict(r) {
+  const k = kind(r);
+  return h("span", { class: "badge " + k }, k === "bad" ? "Нарушение" : k === "ok" ? "Норма" : "Ошибка");
+}
+function vchips(r) {
+  if (r.processing_status !== "Success") return h("span", { class: "err" }, r.violation_type);
+  const vs = r.violation_type.split(";").filter(Boolean);
+  if (!vs.length) return "—";
+  return h("div", { class: "vs" }, vs.map(v => h("span", { class: "vchip", title: (state.vio[v] || {}).text || v }, (state.vio[v] || {}).short || v)));
+}
+function render() {
+  document.querySelectorAll("#chips .chip").forEach(c => { const on = c.dataset.v === state.vfilter; c.classList.toggle("on", on); c.setAttribute("aria-pressed", on); });
+  const rows = visible();
+  $("count").textContent = `${rows.length} из ${state.rows.length}`;
+  const groups = new Map();
+  rows.forEach(r => { if (!groups.has(r.study)) groups.set(r.study, []); groups.get(r.study).push(r); });
+  const body = [];
+  for (const [study, rs] of groups) {
+    const all = state.rows.filter(r => r.study === study);
+    const bad = all.some(r => kind(r) === "bad"), fail = all.some(r => kind(r) === "fail");
+    body.push(h("tr", { class: "study" }, h("td", { colspan: 7 }, study || "(без исследования)",
+      h("span", { class: "sub" }, `${all.length} ${all.length === 1 ? "файл" : all.length < 5 ? "файла" : "файлов"}`), " ",
+      h("span", { class: "badge " + (bad ? "bad" : fail ? "fail" : "ok") }, bad ? "есть нарушения" : fail ? "есть ошибки" : "качественное"))));
+    for (const r of rs) {
+      const tr = h("tr", { class: "img" + (state.sel === r.path_to_study ? " sel" : ""), tabindex: 0, "data-p": r.path_to_study,
+        onclick: () => select(r), onkeydown: (e) => keynav(e, r) },
+        h("td", { class: "path", title: r.path_to_study }, shortPath(r)), h("td", {}, r.anatomical_region),
+        h("td", { class: "nw" }, r.projection || "—"),
+        h("td", {}, verdict(r)), h("td", { class: "num" }, r.quality_score == null ? "—" : r.quality_score.toFixed(2)), h("td", {}, vchips(r)), h("td", { class: "num" }, r.time_of_processing.toFixed(3)));
+      body.push(tr);
+    }
+  }
+  if (!body.length) body.push(h("tr", {}, h("td", { colspan: 6, class: "empty" }, "Нет строк под выбранный фильтр")));
+  $("tbody").replaceChildren(...body);
+}
+function keynav(e, r) {
+  if (e.key === "Enter" || e.key === " ") { e.preventDefault(); select(r); return; }
+  if (e.key !== "ArrowDown" && e.key !== "ArrowUp") return;
+  e.preventDefault();
+  const trs = Array.from(document.querySelectorAll("tr.img"));
+  const i = trs.indexOf(e.currentTarget) + (e.key === "ArrowDown" ? 1 : -1);
+  if (trs[i]) { trs[i].focus(); const p = trs[i].dataset.p; select(state.rows.find(x => x.path_to_study === p)); }
+}
+function select(r) {
+  state.sel = r.path_to_study;
+  document.querySelectorAll("tr.img").forEach(tr => tr.classList.toggle("sel", tr.dataset.p === r.path_to_study));
+  const v = $("viewer");
+  const vs = r.violation_type.split(";").filter(Boolean);
+  const parts = [h("h3", {}, r.anatomical_region, " ", verdict(r)), h("div", { class: "p" }, r.path_to_study)];
+  if (r.processing_status !== "Success") {
+    parts.push(h("div", { class: "err" }, r.violation_type));
+    v.replaceChildren(...parts); return;
+  }
+  parts.push(vs.length ? h("ul", {}, vs.map(x => h("li", {}, h("b", {}, (state.vio[x] || {}).short || x), " — ", (state.vio[x] || {}).text || "", " ", h("code", {}, x))))
+                       : h("p", {}, "Нарушений не найдено."));
+  if (state.overlays) {
+    const q = `/ui/jobs/${state.job}/overlay?path=${encodeURIComponent(r.path_to_study)}`;
+    const img = h("img", { alt: "Overlay: " + r.path_to_study, src: q + "&kind=png" });
+    img.addEventListener("error", () => img.replaceWith(h("div", { class: "none" }, "Overlay для этого файла не построен")));
+    parts.push(h("div", { class: "imgbox" }, img),
+      h("div", { class: "dl", style: "margin-top:10px" }, h("a", { class: "btn", href: q + "&kind=dcm" }, "↓ DICOM overlay (Secondary Capture)")),
+      h("div", { class: "hint" }, "Красным — сработавшее правило, жёлтым и голубым — измерение без нарушения. Подписи на снимке — латиницей."));
+  } else {
+    parts.push(h("div", { class: "hint" }, "Overlay-серия не строилась: включите её перед обработкой."));
+  }
+  v.replaceChildren(...parts);
+}
+document.querySelectorAll("#seg button").forEach(b => b.addEventListener("click", () => {
+  state.filter = b.dataset.f;
+  document.querySelectorAll("#seg button").forEach(x => x.setAttribute("aria-pressed", x === b));
+  render();
+}));
+$("q").addEventListener("input", e => { state.q = e.target.value.trim(); render(); });
+</script>
+</body>
+</html>
