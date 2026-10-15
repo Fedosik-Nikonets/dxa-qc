@@ -217,16 +217,16 @@ curl -F files=@CR000000.dcm -F files=@CR000001.dcm "http://localhost:8000/predic
 ## Выходные данные
 
 Восемь колонок ТЗ 2.5 в требуемом порядке, после них — `quality_score`,
-`study` и `projection`. Пример на синтетических исследованиях из демо (UID
-опущены):
+`study` и `projection`. Пример на синтетических исследованиях из демо (UID,
+время и служебные колонки опущены):
 
-| `path_to_study` | `anatomical_region` | `quality_class` | `violation_type` | `processing_status` | `quality_score` |
-|---|---|:---:|---|---|:---:|
-| `study_01/CR000000.dcm` | Поясничный отдел позвоночника | 0 | | Success | 0.38 |
-| `study_02/CR000000.dcm` | Поясничный отдел позвоночника | 1 | `SPINE_AXIS_TILT` | Success | 0.96 |
-| `study_03/CR000002.dcm` | Проксимальный отдел правого бедра | 1 | `FEMUR_ROI_COVERAGE` | Success | 0.93 |
-| `study_04/CR000001.dcm` | Проксимальный отдел левого бедра | 1 | `FEMUR_POSITIONING_ROTATION` | Success | 0.99 |
-| `study_07/readme.dcm` | Не определена | | файл не является DICOM (нет префикса DICM и разбор не удался) | Failure | |
+| path_to_study · anatomical_region | quality_class | violation_type | quality_score | processing_status |
+|---|:---:|---|:---:|---|
+| `study_01/CR000000.dcm`<br>Поясничный отдел позвоночника | 0 | | 0.38 | Success |
+| `study_02/CR000000.dcm`<br>Поясничный отдел позвоночника | 1 | `SPINE_AXIS_TILT` | 0.96 | Success |
+| `study_03/CR000002.dcm`<br>Проксимальный отдел правого бедра | 1 | `FEMUR_ROI_COVERAGE` | 0.93 | Success |
+| `study_04/CR000001.dcm`<br>Проксимальный отдел левого бедра | 1 | `FEMUR_POSITIONING_ROTATION` | 0.99 | Success |
+| `study_07/readme.dcm`<br>Не определена | | файл не является DICOM (нет префикса DICM и разбор не удался) | | Failure |
 
 - **Строка на каждый файл**, включая дубликаты и не-DICOM: молча пропускать опаснее.
 - **У `Failure` колонка `quality_class` пуста**, а не 0: ноль означал бы «снимок качественный» о файле, который не удалось прочитать. Причина — в `violation_type`.
