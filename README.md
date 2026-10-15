@@ -232,7 +232,7 @@ curl -F files=@CR000000.dcm -F files=@CR000001.dcm "http://localhost:8000/predic
 
 - **Строка на каждый файл**, включая дубликаты и не-DICOM: молча пропускать опаснее.
 - **У `Failure` колонка `quality_class` пуста**, а не 0: ноль означал бы «снимок качественный» о файле, который не удалось прочитать. Причина — в `violation_type`.
-- **Несколько нарушений** — через `;` в порядке [`taxonomy.yaml`](taxonomy.yaml), например `FEMUR_POSITIONING_ROTATION;FEMUR_ROI_COVERAGE`.
+- **Несколько нарушений** — через `;` в порядке [`docs/taxonomy.yaml`](docs/taxonomy.yaml), например `FEMUR_POSITIONING_ROTATION;FEMUR_ROI_COVERAGE`.
 
 Полное описание таблицы, overlay-серии и отчёта DICOM SR — [docs/output_format.md](docs/output_format.md).
 
@@ -300,7 +300,7 @@ curl -F files=@CR000000.dcm -F files=@CR000001.dcm "http://localhost:8000/predic
 | 3.2 | зафиксированы версии зависимостей и базового образа | `requirements.txt`, `docker/requirements-runtime.txt` (с транзитивными), базовый образ по sha256 | да |
 | 5 | README: восемь пунктов | назначение и ограничения — введение и «Ограничения»; структура — «Структура репозитория», [docs/architecture.md](docs/architecture.md); требования и зависимости — «Системные требования»; сборка и запуск — «Быстрый старт»; API — «HTTP API»; форматы — «Быстрый старт», «Выходные данные», [docs/output_format.md](docs/output_format.md); модель и обработка — «Как работает»; ошибки — «Ограничения», «Выходные данные» | да |
 | 5 | руководство пользователя, руководство по развёртыванию, процедура обучения | [`docs/user_guide.md`](docs/user_guide.md), [`docs/deployment.md`](docs/deployment.md), [`docs/training.md`](docs/training.md) | да |
-| 4, 7.2 | презентация по девяти пунктам и демонстрационный сценарий | презентация — PDF по ссылке из формы сдачи (исходник — [`presentation/src/`](presentation/src/)), [`docs/demo_scenario.md`](docs/demo_scenario.md) | да |
+| 4, 7.2 | презентация по девяти пунктам и демонстрационный сценарий | презентация — PDF по ссылке из формы сдачи (исходник — [`docs/presentation/`](docs/presentation/README.md)), [`docs/demo_scenario.md`](docs/demo_scenario.md) | да |
 
 </details>
 
@@ -344,32 +344,30 @@ DICOM разметки нет, исправлять и проверять исп
 | [Воспроизводимость](docs/reproducibility.md) | ML-инженер | фолды, детерминированная запись, стресс-тест, тесты |
 | [Демо-сценарий](docs/demo_scenario.md) | показ | сценарий на 6–8 минут (ТЗ 7.2) |
 
-Полная карта, включая отчёты дней спринта, — [docs/README.md](docs/README.md); история версий — [CHANGELOG.md](CHANGELOG.md).
+Полная карта, включая отчёты дней спринта, — [docs/README.md](docs/README.md); история версий — [docs/CHANGELOG.md](docs/CHANGELOG.md).
 
 ## Структура репозитория
 
 ```text
 dxa-qc/
-├── src/dxa_qc/        пакет: DICOM, роутер, правила, overlay, отчёты, API, веб
-├── models/            веса сервиса — три файла, 4.8 КБ
-├── tests/             pytest на синтетических DICOM
-├── scripts/           01–26: разведка, пороги, метрики, проверки перед сдачей
-├── reports/           отчёты дней спринта и таблицы со всеми цифрами
-├── annotations/       точки бедра от врача на 80 снимках
-├── docs/              руководства, API, форматы, метрики, ограничения
-├── presentation/src/  исходник презентации (ТЗ 4)
-├── plan/              рабочий план спринта
-├── docker/            entrypoint и runtime-зависимости образа
-├── Dockerfile, build.sh, run.sh    контейнер (ТЗ 3.2)
-├── taxonomy.yaml      типы нарушений и области: коды и формулировки ТЗ
-└── requirements.txt   окружение разработки (версии закреплены)
+├── src/dxa_qc/     пакет: DICOM, роутер, правила, overlay, отчёты, API, веб
+├── models/         веса сервиса — три файла, 4.8 КБ
+├── tests/          pytest на синтетических DICOM, запасной запускатель без pytest
+├── scripts/        01–26: разведка, пороги, метрики, проверки перед сдачей
+├── reports/        отчёты дней спринта, таблицы со всеми цифрами, план спринта
+├── annotations/    точки бедра от врача на 80 снимках
+├── docs/           руководства, API, форматы, метрики, ограничения, презентация
+├── docker/         entrypoint и runtime-зависимости образа
+├── Dockerfile · build.sh · run.sh       контейнер, сборка и запуск (ТЗ 3.2)
+└── pyproject.toml · requirements.txt   пакет, настройки pytest, закреплённые версии
 ```
 
 У каждой папки свой README с описанием содержимого:
 [`models/`](models/README.md) · [`scripts/`](scripts/README.md) ·
 [`reports/`](reports/README.md) · [`tests/`](tests/README.md) ·
-[`annotations/`](annotations/README.md) · [`docs/`](docs/README.md) ·
-[`plan/`](plan/README.md).
+[`annotations/`](annotations/README.md) · [`docs/`](docs/README.md).
+Типы нарушений и их формулировки по ТЗ — [`docs/taxonomy.yaml`](docs/taxonomy.yaml),
+история версий — [`docs/CHANGELOG.md`](docs/CHANGELOG.md).
 
 ## Воспроизводимость
 
@@ -377,7 +375,7 @@ dxa-qc/
 - **Версии закреплены жёстко** — `requirements.txt`, а в образе — вместе с транзитивными.
 - **Выход детерминирован** — два прогона различаются только колонкой `time_of_processing`; образы под arm64 и amd64 дают одинаковые таблицы.
 - **Стресс-тест** — 77 файлов (пустые, текстовые, обрезанные, цветные, сжатые, 2048×2048, кириллица в путях): ни одного падения, строка на каждый файл.
-- **Тесты** — `python -m pytest tests -q` или `python run_tests.py` без pytest; обе ветви ридера, с pydicom и без, проверяются отдельно.
+- **Тесты** — `python -m pytest tests -q` или `python tests/run_tests.py` без pytest; обе ветви ридера, с pydicom и без, проверяются отдельно.
 
 Подробно — [docs/reproducibility.md](docs/reproducibility.md).
 

@@ -60,12 +60,12 @@ src/dxa_qc/            пакет сервиса
 models/                веса: artifact_tophat_v1.npz (1.6 КБ), rotation_profile_v1.json (1.2 КБ),
                        quality_score_v1.json (крутизна правил для балла)
 Dockerfile, build.sh, run.sh, docker/   контейнер (ТЗ 3.2)
-tests/                 pytest; run_tests.py — запасной запускатель без pytest
+tests/                 pytest; tests/run_tests.py — запасной запускатель без pytest
 scripts/               разведка, обучение, метрики, проверки (см. ниже)
 reports/               отчёты дней спринта и таблицы, из которых взяты все цифры
 annotations/           точки бедра, поставленные врачом (80 снимков)
 docs/                  руководства пользователя, развёртывания, обучения; демо-сценарий
-presentation/          презентация (ТЗ 4) и её исходник
+docs/presentation/     исходник презентации (ТЗ 4)
 ```
 
 Скрипты `scripts/01`–`24` воспроизводят все цифры из отчётов в `reports/`

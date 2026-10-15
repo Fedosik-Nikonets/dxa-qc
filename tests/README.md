@@ -4,7 +4,7 @@
 
 ```bash
 python -m pytest tests -q        # окружение разработки (requirements.txt)
-python run_tests.py              # то же без pytest — для машины без PyPI
+python tests/run_tests.py        # то же без pytest — для машины без PyPI
 ```
 
 Тесты не требуют данных организатора: всё, что может прийти в закрытом

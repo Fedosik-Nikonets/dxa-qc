@@ -27,7 +27,7 @@
 |---|---|
 | [demo_scenario.md](demo_scenario.md) | демонстрационный сценарий на 6–8 минут (ТЗ 4, п. 9; ТЗ 7.2) |
 | [submission.md](submission.md) | комплект финальной сдачи и порядок действий 27–29 сентября |
-| [../presentation/src/](../presentation/src/README.md) | исходник презентации (ТЗ 4); готовый PDF — по ссылке из формы сдачи |
+| [presentation/](presentation/README.md) | исходник презентации (ТЗ 4); готовый PDF — по ссылке из формы сдачи |
 
 ## Рабочие материалы спринта
 
@@ -38,5 +38,12 @@
 | [../models/](../models/README.md) | веса сервиса — три файла, 4.8 КБ |
 | [../annotations/](../annotations/README.md) | точки бедра, поставленные врачом на 80 снимках |
 | [../tests/](../tests/README.md) | тесты и генератор синтетических DICOM |
-| [../plan/](../plan/README.md) | рабочий план спринта |
+| [../reports/plan/](../reports/plan/README.md) | рабочий план спринта |
 | [assets/](assets/README.md) | картинки README и как они сделаны |
+
+## Справочное
+
+| файл | что внутри |
+|---|---|
+| [taxonomy.yaml](taxonomy.yaml) | области и типы нарушений: коды, формулировки ТЗ 2.3, порядок в `violation_type` |
+| [CHANGELOG.md](CHANGELOG.md) | история версий |

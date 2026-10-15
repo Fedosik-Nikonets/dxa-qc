@@ -1,12 +1,14 @@
 # Сборка презентации
 
-`../DXA_QC_presentation.pptx` собирается скриптом на официальном шаблоне
+[← README](../../README.md) · [Карта документации](../README.md)
+
+`DXA_QC_presentation.pptx` собирается скриптом на официальном шаблоне
 ЛЦТ 2026 (архив «Презентация.zip» от организатора, в репозиторий не кладётся).
 
 ```bash
 pip install python-pptx==1.0.2 Pillow
-cp <путь к шаблону>.pptx presentation/src/template.pptx
-cd presentation/src && python3 build.py ../DXA_QC_presentation.pptx
+cp <путь к шаблону>.pptx docs/presentation/template.pptx
+cd docs/presentation && python3 build.py DXA_QC_presentation.pptx
 ```
 
 * Слайды 1–5 — обязательные слайды шаблона (в шаблоне 7–11): заполнены
